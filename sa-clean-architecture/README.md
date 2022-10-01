@@ -69,7 +69,7 @@ outer layer. This layer is where the Main component is defined.
 
 <h4>Crossing boundaries</h4>
 
-The diagram displays an example of boundary crossing (at the lower right).
+The diagram in Figure 1 displays an example of boundary crossing (at the lower right).
 The flow of control begins in the controller, moves through the use case,
 and then ends up executing in the presenter. The source code dependencies
 point toward the use cases. We resolve this contradiction by using the
