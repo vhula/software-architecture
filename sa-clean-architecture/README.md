@@ -8,6 +8,7 @@
 </figure>
 
 <h2>Book</h2>
+
 [Clean Architecture by Robert C. Martin](https://www.goodreads.com/book/show/18043011-clean-architecture)
 
 <h2>Concepts</h2>
@@ -42,3 +43,36 @@ Principle</b> to resolve such a contradiction.
 The Dependency Inversion Principle (DIP) states that higher-level
 modules should not depend on low-level modules. They should both
 depend on abstractions.
+
+<h4>Entities</h4>
+
+Entities encapsulate critical business rules. These are the rules
+that exist even if the software system does not. For example,
+clerks will check your credit history before giving you a loan, even
+if there is no software system.
+
+<h4>Use cases</h4>
+
+Use cases are application specific, meaning that critical business rules
+are used differently in different applications.
+
+<h4>Interface adapters</h4>
+
+These are controllers, gateways, and presenters. This layer exists for
+converting data to the format most convenient for the use cases and
+external agency.
+
+<h4>Frameworks and drivers</h4>
+
+All devices, DB, web, UI, and external interface details belong to the
+outer layer. This layer is where the Main component is defined.
+
+<h4>Crossing boundaries</h4>
+
+The diagram displays an example of boundary crossing (at the lower right).
+The flow of control begins in the controller, moves through the use case,
+and then ends up executing in the presenter. The source code dependencies
+point toward the use cases. We resolve this contradiction by using the
+Dependency Inversion Principle.
+
+The data that crosses boundaries should be simple data structures.
