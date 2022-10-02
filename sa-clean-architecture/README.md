@@ -7,9 +7,12 @@
   <figcaption>Figure 1. The clean architecture</figcaption>
 </figure>
 
-<h2>Book</h2>
+<h2>References</h2>
 
-[Clean Architecture by Robert C. Martin](https://www.goodreads.com/book/show/18043011-clean-architecture)
+* [Clean Architecture by Robert C. Martin](https://www.goodreads.com/book/show/18043011-clean-architecture)
+* [Robert C Martin - Clean Architecture and Design](https://www.youtube.com/watch?v=Nsjsiz2A9mg)
+* [clean-architecture book summary](https://github.com/serodriguez68/clean-architecture)
+* [A clean architecture example by Mattia Battiston](https://hackmd.io/@pierodibello/S1JvdXoKP#)
 
 <h2>Concepts</h2>
 
@@ -51,6 +54,8 @@ that exist even if the software system does not. For example,
 clerks will check your credit history before giving you a loan, even
 if there is no software system.
 
+These are not database entities but domain entities.
+
 <h4>Use cases</h4>
 
 Use cases are application specific, meaning that critical business rules
@@ -62,6 +67,11 @@ These are controllers, gateways, and presenters. This layer exists for
 converting data to the format most convenient for the use cases and
 external agency.
 
+Controllers are the entry points that provide access to the application.
+
+Gateways are the data providers. They are used to retrieve and store
+information.
+
 <h4>Frameworks and drivers</h4>
 
 All devices, DB, web, UI, and external interface details belong to the
@@ -69,7 +79,7 @@ outer layer. This layer is where the Main component is defined.
 
 <h4>Crossing boundaries</h4>
 
-The diagram in Figure 1 displays an example of boundary crossing (at the lower right).
+Figure 1 displays an example of boundary crossing (at the lower right).
 The flow of control begins in the controller, moves through the use case,
 and then ends up executing in the presenter. The source code dependencies
 point toward the use cases. We resolve this contradiction by using the
